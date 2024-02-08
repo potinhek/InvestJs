@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="investjs.js"></script>
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    header {
+        text-align: center;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        align-items: center;
+        background-color: black;
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    input {
+        background-color: white;
+        height: 20px;
+        width: 250px;
+    }
+
+    section {
+        background-color: white;
+    }
+    #inp-src{
+        position: relative;
+        width: 300px;
+    }
+    #inp-src input{
+        padding-right: 30px;
+    }
+    .icon-psc{
+        position: absolute;
+        top: 10%;
+        right: 15px;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1 onclick="pgn()">Invest.JS</h1>
+        <a onclick="investimentos()" onmouseenter="inv()" onmouseout="invs()">Investimentos</a>
+        <a  onclick="tools()">Ferramentas</a>
+        <div id="inp-src">
+        <input type="text" id="pesquisa">
+        <span class="icon-psc" onclick="src()" ><img src="imagens/sarch.png" alt="" srcset=""></span>
+         </div>
+        <img src="imagens/icons8-usuário-homem-com-círculo-32.png" alt="" srcset="" onclick="pglogin()">
+    </header>
+
+    <section>
+    
+
+    </section>
+</body>
+
+</html>

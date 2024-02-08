@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="investjs.js"></script>
+    <link rel="stylesheet" href="tools.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="tools.js"></script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    header {
+        text-align: center;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        align-items: center;
+        background-color: black;
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    input {
+        background-color: white;
+        height: 20px;
+        width: 250px;
+    }
+
+    section {
+        background-color: white;
+    }
+
+    #inp-src {
+        position: relative;
+        width: 300px;
+    }
+
+    #inp-src input {
+        padding-right: 30px;
+    }
+
+    .icon-psc {
+        position: absolute;
+        top: 10%;
+        right: 15px;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header>
+
+        <h1 onclick="pgn()">Invest.JS</h1>
+        <a onclick="investimentos()">Investimentos</a>
+        <a onclick="tools()">Ferramentas</a>
+        <div id="inp-src">
+            <input type="text" id="pesquisa">
+            <span class="icon-psc"><img src="imagens/sarch.png" alt="" srcset=""></span>
+        </div>
+        <img src="imagens/icons8-usuário-homem-com-círculo-32.png" alt="" srcset="" onclick="pglogin()">
+    </header>
+
+    <section>
+        <h2>Ferramentas</h2>
+        <hr>
+        <div class="fetools">
+            <div class="toolsf" onclick="calc()">
+
+                <p>Calculadora Completa</p>
+                <img src="https://th.bing.com/th/id/OIG1.TMOl7gdwyi7h_1n4PG2U?pid=ImgGn"
+                    alt="">
+            </div>
+            <div class="toolsf" onclick="news()">Ultimas notícias
+            <img src="https://th.bing.com/th/id/OIG3.KlNAVkh0MxzenhVqHxao?pid=" alt="">
+        </div>
+            <div class="toolsf" onclick="conversor()">Conversor de moedas
+            <img src="https://th.bing.com/th/id/OIG4.nPmbOCONHlzAvGLfwyxk?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="" srcset="">
+        </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="menutools"></div>
+        <div id="calculadora" hidden>
+            <input type="text" id="displayvw" onkeydown="checkEnter(event)">
+            <input type="button" value="Calcular" onclick="calculator()">
+        </div>
+        <div id="resultado"></div>
+        <br>
+        <div id="news" hidden >
+            <h3>Ultimas notícias sobre insvestimentos</h3>
+        </div>
+        <br>
+        <div id="convmoney"></div>
+        
+    </section>
+</body>
+
+</html>

@@ -71,10 +71,9 @@
 
 <body>
     <header>
-
         <h1 onclick="pgn()">Invest.JS</h1>
-        <a onclick="investimentos()">Investimentos</a>
-        <a onclick="tools()">Ferramentas</a>
+        <a onmouseenter="investing()" onclick="investimentos()">Investimentos</a>
+        <a class="tlls" onclick="tools()">Ferramentas</a>
         <div id="inp-src">
             <input type="text" id="pesquisa">
             <span class="icon-psc"><img src="imagens/sarch.png" alt="" srcset=""></span>
@@ -89,15 +88,15 @@
             <div class="toolsf" onclick="calc()">
 
                 <p>Calculadora Completa</p>
-                <img src="https://th.bing.com/th/id/OIG1.TMOl7gdwyi7h_1n4PG2U?pid=ImgGn"
-                    alt="">
+                <img src="https://th.bing.com/th/id/OIG1.TMOl7gdwyi7h_1n4PG2U?pid=ImgGn" alt="">
             </div>
             <div class="toolsf" onclick="news()">Ultimas notícias
-            <img src="https://th.bing.com/th/id/OIG3.KlNAVkh0MxzenhVqHxao?pid=" alt="">
-        </div>
+                <img src="https://th.bing.com/th/id/OIG3.KlNAVkh0MxzenhVqHxao?pid=" alt="">
+            </div>
             <div class="toolsf" onclick="conversor()">Conversor de moedas
-            <img src="https://th.bing.com/th/id/OIG4.nPmbOCONHlzAvGLfwyxk?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="" srcset="">
-        </div>
+                <img src="https://th.bing.com/th/id/OIG4.nPmbOCONHlzAvGLfwyxk?w=1024&h=1024&rs=1&pid=ImgDetMain" alt=""
+                    srcset="">
+            </div>
         </div>
         <br>
         <hr>
@@ -106,16 +105,35 @@
         <div id="calculadora" hidden>
             <input type="text" id="displayvw" onkeydown="checkEnter(event)">
             <input type="button" value="Calcular" onclick="calculator()">
+            <div class=btnumbers>
+                <input type="button" value="7" id="number7" onclick="numbercalc('7')">
+                <input type="button" value="8" id="number8" onclick="numbercalc('8')">
+                <input type="button" value="9" id="number9" onclick="numbercalc('9')">
+                <input type="button" value="+" id="oprcalc" onclick="numbercalc('+')">
+                <br>
+                <input type="button" value="4" id="number4" onclick="numbercalc('4')">
+                <input type="button" value="5" id="number5" onclick="numbercalc('5')">
+                <input type="button" value="6" id="number6" onclick="numbercalc('6')">
+                <input type="button" value="-" id="oprcalc" onclick="numbercalc('-')">
+
+                <br>
+                <input type="button" value="1" id="number1" onclick="numbercalc('1')">
+                <input type="button" value="2" id="number2" onclick="numbercalc('2')">
+                <input type="button" value="3" id="number3" onclick="numbercalc('3')">
+                <input type="button" value="/" id="oprcalc" onclick="numbercalc('/')">
+
+            </div>
         </div>
         <div id="resultado"></div>
         <br>
-        <div id="news" hidden >
+        <div id="news" hidden>
             <h3>Ultimas notícias sobre insvestimentos</h3>
         </div>
         <br>
         <div id="convmoney"></div>
-        
+
     </section>
+   
 </body>
 
 </html>

@@ -24,3 +24,10 @@ function news(){
     document.getElementById("news").style.display='block'
     document.getElementById("calculadora").style.display="none"
 }
+
+function numbercalc(number){
+    var display= document.getElementById("displayvw");
+    var currentValue= display.value;
+    var newValue= currentValue+ number;
+    display.value= newValue;
+}   
